@@ -10,6 +10,8 @@ var app = express();
 var favicon = require('serve-favicon');
 var path = require('path');
 
+app.set('port', (process.env.PORT || 5000));
+
 app.use(express.static('public'));
 app.use(favicon(path.join(__dirname,'public','images','icons','favicon.ico')));
 
@@ -27,7 +29,6 @@ app.use(function(err, req, res, next) {
 
 
 
-
-http.createServer(app).listen(3000, function () {
-  console.log('http app listening on port 3000!');
+app.listen(app.get('port'), function() {
+  console.log('Node app is running on port', app.get('port'));
 });
