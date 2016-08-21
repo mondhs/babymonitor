@@ -1,0 +1,23 @@
+{
+  "author": "",
+  "name": "babymonitor2",
+  "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/thehawkes/babymonitor.git"
+  },
+  "main": "(index.js)",
+  "scripts": {
+    "start": "node ./app.js"
+  },
+  "dependencies": {
+    "debug": "^2.2.0",
+    "express": "^4.14.0",
+    "serve-favicon": "^2.3.0"
+  },
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
+  }
+}
