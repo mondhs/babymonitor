@@ -26,15 +26,8 @@ app.use(function(err, req, res, next) {
 });
 
 
-var options = {
-  key  : fs.readFileSync(path.join(__dirname,'tls','server.key')),
-  cert : fs.readFileSync(path.join(__dirname,'tls','server.crt'))
-};
 
 
 http.createServer(app).listen(3000, function () {
   console.log('http app listening on port 3000!');
-});
-https.createServer(options, app).listen(4443, function () {
-  console.log('https app listening on port 4443!');
 });
